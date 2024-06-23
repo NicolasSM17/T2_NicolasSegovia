@@ -1,1 +1,23 @@
-<p>calculo works!</p>
+<mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Calculadora de Utilidades</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Salario Mensual</mat-label>
+          <input matInput type="number" [(ngModel)]="salario" name="salario" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Años de Trabajo</mat-label>
+          <input matInput type="number" [(ngModel)]="tiempo" name="aniosTrabajo" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="button" (click)="calcularUtilidad()">
+          Calcular Utilidad
+        </button>
+      </form>
+      <div ngIf="utilidad >= 0" class="resultado">
+        <p><strong>Utilidad Calculada:</strong> {{ utilidad }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>

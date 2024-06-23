@@ -21,4 +21,8 @@ export class MenuComponent {
     this.autenticacionService.logout();
     this.router.navigateByUrl("/autenticacion")
   }
+
+  irCalculo():void{
+    this.router.navigate(["calculo"], {relativeTo: this.route})
+  }
 }
