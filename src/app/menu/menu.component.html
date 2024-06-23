@@ -1,0 +1,23 @@
+<mat-toolbar color="accent">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span >EXAMEN DEL CURSO DESARROLLO DE APLICACIONES WEB 2 - NICOLAS SEGOVIA</span>
+    &nbsp;&nbsp;
+    <button mat-button >Pregunta 1</button>
+    &nbsp;&nbsp;
+    <button mat-button >Pregunta 2</button>
+    &nbsp;&nbsp;
+    <button mat-button>Pregunta 3</button>
+
+    <span class="example-spacer"></span>
+    
+    <button mat-icon-button
+    (click)="salir()"
+     class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+<hr />
+<router-outlet></router-outlet>
